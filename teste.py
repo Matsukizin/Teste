@@ -16,18 +16,12 @@ navegador.get("https://www.salao99.com.br/conta/login?continuacao=https%3A%2F%2F
 sleep(10)
 
 # 2 - Login no site
-# navegador.find_element(By.XPATH, '')
-# driver = webdriver.Chrome()
-navegador.find_element(By.CLASS_NAME, "xemail")
-  
+navegador.find_element(By.XPATH, '').send_keys("")
 navegador.find_element(By.XPATH, '//*[@id="xsenha"]').send_keys("")
 navegador.find_element(By.XPATH, '//*[@id="formLogin"]/div[3]/div[2]/button/span[1]').click()
-sleep(10)  # Espera para o login ser processado
+sleep(10)
 
-# 3 - Abrir atendimentos
-# Implemente o código para navegar até a seção de atendimentos aqui
-# Exemplo de navegação para "Atendimentos" se a opção estiver disponível no menu
-print("Atendimentos")
+print("Login concluído")
 
 # 4 - Clicar em "Adicionar"
 sleep(20)
@@ -49,10 +43,9 @@ with open('Comandas.txt', 'r') as arquivo:
         # Selecionar o cliente (supondo que um clique no nome do cliente seja necessário)
         cliente_selector = By.XPATH, f"//*[text()='{nome}']"  # Atualize o seletor conforme a estrutura HTML
         navegador.find_element(*cliente_selector).click()
+# anotações
 # //*[@id="root"]/div[2]/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div/div[1]/p
 # <p class="MuiTypography-root-278 jss8090 MuiTypography-body1-280">Cliente</p>
-# 
-        # 6 - Selecionar o nome da cliente (este passo pode ser redundante, já está feito acima)
         
         
 
